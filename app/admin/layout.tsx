@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { redirect } from "next/navigation";
 import {
   LayoutDashboard,
@@ -39,27 +38,13 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       <aside className="w-full md:w-64 bg-choco-900 border-b md:border-b-0 md:border-r border-choco-800 flex flex-col shrink-0">
         {/* Header */}
         <div className="p-6 border-b border-choco-800 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="relative w-8 h-8 rounded-full overflow-hidden border border-gold-400/40 shrink-0 bg-[#f7f4ed]">
-              <Image
-                src="/logo.png"
-                alt="Truffle Tales Logo"
-                fill
-                sizes="32px"
-                className="object-cover scale-105"
-              />
-            </div>
-            <div className="flex items-baseline gap-1">
-              <span className="font-serif text-base font-bold tracking-tight text-cream-50">
-                Truffle Tales
-              </span>
-              <span className="text-[9px] font-serif italic text-gold-400">
-                by Parul
-              </span>
-              <span className="ml-1 px-1.5 py-0.5 rounded-md bg-gold-500 text-choco-950 text-[8px] font-montserrat font-bold uppercase tracking-wider">
-                Admin
-              </span>
-            </div>
+          <Link href="/" className="flex items-center gap-2">
+            <span className="font-serif text-xl font-bold tracking-tight text-cream-50">
+              COCOCRAFT
+            </span>
+            <span className="px-2 py-0.5 rounded-md bg-gold-500 text-choco-950 text-[9px] font-montserrat font-bold uppercase tracking-wider">
+              Admin
+            </span>
           </Link>
           <div className="flex items-center gap-1 text-gold-400">
             <Shield className="h-4 w-4" />

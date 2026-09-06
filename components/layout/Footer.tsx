@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Camera, Mail, MessageCircle, Heart, CheckCircle2 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
@@ -47,21 +46,12 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-1 space-y-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 rounded group"
+              className="inline-flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 rounded group"
             >
-              <div className="relative w-11 h-11 rounded-full overflow-hidden border border-gold-400/40 shrink-0 bg-[#f7f4ed]">
-                <Image
-                  src="/logo.png"
-                  alt={`${siteConfig.brandName} Logo`}
-                  fill
-                  sizes="44px"
-                  className="object-cover scale-105"
-                />
-              </div>
-              <div className="flex items-baseline gap-2">
-                <span className="font-serif text-3xl text-cream-50">{siteConfig.brandName}</span>
-                <span className="text-sm font-serif italic text-gold-400">{siteConfig.brandSubtitle}</span>
-              </div>
+              <span className="font-serif text-3xl text-cream-50">{siteConfig.brandName}</span>
+              <span className="text-[10px] font-montserrat font-bold tracking-[0.25em] uppercase text-gold-400 self-end mb-1">
+                {siteConfig.brandSubtitle}
+              </span>
             </Link>
             <p className="text-sm text-cream-200/70 font-sans leading-relaxed max-w-xs">
               Pure couverture artisanal chocolates, handcrafted fresh to order for life&rsquo;s most cherished moments.

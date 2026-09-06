@@ -19,8 +19,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Truffle Tales by Parul | Premium Custom Chocolates",
-  description: "Handcrafted luxury couverture chocolates and bespoke custom chocolate bars by Parul.",
+  title: "COCOCRAFT | Premium Personalised Couverture Chocolates",
+  description: "Create a chocolate that's as personal as the person you're gifting it to.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

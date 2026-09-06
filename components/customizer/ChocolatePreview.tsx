@@ -209,13 +209,13 @@ export function ChocolatePreview({
           </div>
         )}
 
-        {/* TRUFFLE TALES watermark */}
+        {/* COCOCRAFT watermark */}
         <div className="absolute top-3 right-4 pointer-events-none">
           <span
             className="font-montserrat font-black tracking-widest text-cream-50/20 uppercase"
             style={{ fontSize: "clamp(7px, 1.5vw, 11px)" }}
           >
-            TRUFFLE TALES
+            COCOCRAFT
           </span>
         </div>
       </div>

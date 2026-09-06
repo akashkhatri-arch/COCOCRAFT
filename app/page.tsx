@@ -89,7 +89,7 @@ export default async function Home() {
                     <p className="text-[10px] font-montserrat font-bold tracking-widest uppercase text-gold-400">
                       Handcrafted Couverture
                     </p>
-                    <h3 className="text-xl mt-0.5">Truffle Tales</h3>
+                    <h3 className="text-xl mt-0.5">COCOCRAFT</h3>
                   </div>
                   <span className="text-2xl">🍫</span>
                 </div>

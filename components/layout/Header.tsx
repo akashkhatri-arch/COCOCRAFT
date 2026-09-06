@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingBag, User, Menu, X, Search, ArrowRight, Heart } from "lucide-react";
@@ -94,27 +93,15 @@ export const Header: React.FC<HeaderProps> = ({ cartCount: cartCountOverride }) 
             {/* Logo */}
             <Link
               href="/"
-              className="flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 rounded group"
-              aria-label={`${siteConfig.brandName} ${siteConfig.brandSubtitle} – Home`}
+              className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 rounded"
+              aria-label={`${siteConfig.brandName} – Home`}
             >
-              <div className="relative w-10 h-10 rounded-full overflow-hidden border border-gold-400/40 shadow-xs shrink-0 bg-[#f7f4ed]">
-                <Image
-                  src="/logo.png"
-                  alt={`${siteConfig.brandName} Logo`}
-                  fill
-                  sizes="40px"
-                  className="object-cover scale-105"
-                  priority
-                />
-              </div>
-              <div className="flex items-baseline gap-1.5">
-                <span className="font-serif text-2xl tracking-tight text-choco-900 select-none group-hover:text-gold-700 transition-colors">
-                  {siteConfig.brandName}
-                </span>
-                <span className="text-[11px] sm:text-xs font-serif italic tracking-wide text-gold-600 select-none">
-                  {siteConfig.brandSubtitle}
-                </span>
-              </div>
+              <span className="font-serif text-2xl tracking-tight text-choco-900 select-none">
+                {siteConfig.brandName}
+              </span>
+              <span className="hidden sm:inline-block text-[9px] font-montserrat font-bold tracking-[0.25em] uppercase text-gold-600 self-end mb-0.5 select-none">
+                {siteConfig.brandSubtitle}
+              </span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -261,21 +248,12 @@ export const Header: React.FC<HeaderProps> = ({ cartCount: cartCountOverride }) 
                 <Link
                   href="/"
                   onClick={() => setMobileOpen(false)}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-2 font-serif text-xl text-choco-900"
                 >
-                  <div className="relative w-8 h-8 rounded-full overflow-hidden border border-gold-400/40 shrink-0 bg-[#f7f4ed]">
-                    <Image
-                      src="/logo.png"
-                      alt={`${siteConfig.brandName} Logo`}
-                      fill
-                      sizes="32px"
-                      className="object-cover scale-105"
-                    />
-                  </div>
-                  <div className="flex items-baseline gap-1.5 font-serif text-xl text-choco-900">
-                    <span>{siteConfig.brandName}</span>
-                    <span className="text-xs font-serif italic text-gold-600">{siteConfig.brandSubtitle}</span>
-                  </div>
+                  <span>{siteConfig.brandName}</span>
+                  <span className="text-[9px] font-montserrat font-bold tracking-[0.2em] uppercase text-gold-600 self-end mb-0.5">
+                    {siteConfig.brandSubtitle}
+                  </span>
                 </Link>
                 <button
                   onClick={() => setMobileOpen(false)}
