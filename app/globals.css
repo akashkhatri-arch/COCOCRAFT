@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand Colors ─────────────────────────────────────── */
+  --color-choco-950: #140706;
+  --color-choco-900: #250e0d;
+  --color-choco-800: #3d1614;
+  --color-choco-700: #5c2320;
+  --color-choco-600: #7b3330;
+  --color-choco-500: #9b4440;
+  --color-choco-400: #c06b67;
+  --color-choco-300: #d4918e;
+  --color-choco-200: #e8b8b6;
+  --color-choco-100: #f6e8e7;
+
+  --color-cream-50:  #fdf8f4;
+  --color-cream-100: #f9ede3;
+  --color-cream-200: #f3dcc8;
+  --color-cream-300: #eaccb4;
+
+  --color-gold-600: #a67c2a;
+  --color-gold-500: #c8973a;
+  --color-gold-400: #d9b06a;
+  --color-gold-300: #ead49a;
+
+  /* ── Custom Spacing ───────────────────────────────────── */
+  --spacing-4-5: 1.125rem;
+  --spacing-13: 3.25rem;
+
+  /* ── Typography ───────────────────────────────────────── */
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-sans:  var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-montserrat: var(--font-montserrat), "Helvetica Neue", Arial, sans-serif;
+
+  /* ── Shadows ──────────────────────────────────────────── */
+  --shadow-warm: 0 4px 24px -4px rgba(36, 14, 13, 0.12);
+  --shadow-warm-lg: 0 8px 40px -8px rgba(36, 14, 13, 0.18);
+}
+
+/* ── Base styles ────────────────────────────────────────── */
+:root {
+  --background: var(--color-cream-50);
+  --foreground: var(--color-choco-950);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Focus ring reset ───────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-gold-500);
+  outline-offset: 2px;
+}
+
+/* ── Custom utility classes ─────────────────────────────── */
+.h-4-5 {
+  height: var(--spacing-4-5);
+}
+.w-4-5 {
+  width: var(--spacing-4-5);
+}
+
+/* ── Reduced motion ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Line clamp utilities ───────────────────────────────── */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
